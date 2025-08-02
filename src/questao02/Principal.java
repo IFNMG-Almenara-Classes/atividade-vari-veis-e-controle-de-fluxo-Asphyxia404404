@@ -10,9 +10,9 @@ public class Principal {
 
         
         System.out.println("digite seu peso");
-        float peso = entrada.nextInt();
+        float peso = entrada.nextFloat();
         System.out.println("digite sua altura");
-        float altura = entrada.nextInt();
+        float altura = entrada.nextFloat();
         float imc = peso / (altura *altura);
         System.out.println("\r\n" + //
                         "| IMC         | Classificação                |\r\n" + //
@@ -24,8 +24,42 @@ public class Principal {
                         "| 35,0 - 39,9 | Obesidade Grau II (Severa)   |\r\n" + //
                         "| >= 40       | Obesidade Grau III (mórbida) |");
 
+
+
+                        System.out.printf("seu imc é : %.2f, e voce esta: ", imc);
+
+            if(imc > 39.9){
+            
+            System.out.printf(" Obesidade Grau III (mórbida)");
+            
+            
+        }
+        else if(imc > 35.0){
+            
+            System.out.printf(" Obesidade Grau II (Severe)");
+
+
+        }
+        else if(imc > 30.0){
+            System.out.printf(" Obesidade Grau I");
+
+
+        }
+
+        else if(imc > 25.0){
+            System.out.printf(" Sobrepeso");
+
+        }
+        else if(imc > 18.5){
+            System.out.printf("Saudavel");
+             
+        }
+        else if(imc < 18.5){
+            System.out.printf("Magreza");
+
+        }
+
         
-        System.out.println(imc);
 
         
 
